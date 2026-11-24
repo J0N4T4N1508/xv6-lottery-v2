@@ -29,7 +29,7 @@ Para salir de QEMU: Ctrl+A y luego X.
 Ver `pruebas/casos_de_prueba.md` y las capturas en `pruebas/capturas/`.
 
 ## Documentación
-Informe y presentación en `docs/`.
+Informe y presentación en `documento_TrabajoFinal/`.
 
 ## Integrantes
 - Jonatan Rony Huaman Palomino – @J0N4T4N1508 – LinkedIn: www.linkedin.com/in/jonatan-rony-huaman-palomino-90b62b39b
