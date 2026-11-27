@@ -25,16 +25,18 @@ main(int argc, char *argv[])
   }
 
   for(i = 0; i < n; i++){
+    // El padre fija los boletos ANTES de fork: el hijo los hereda
+    // y nace con su peso real, sin depender de ganar un sorteo.
+    if(settickets(atoi(argv[i+1])) < 0){
+      printf("settickets fallo\n");
+      exit(1);
+    }
     int pid = fork();
     if(pid < 0){
       printf("fork fallo\n");
       exit(1);
     }
     if(pid == 0){
-      if(settickets(atoi(argv[i+1])) < 0){
-        printf("settickets fallo\n");
-        exit(1);
-      }
       spin();
       exit(0);
     }
@@ -69,11 +71,3 @@ main(int argc, char *argv[])
     wait(0);
   exit(0);
 }
-
-
-
-
-
-
-
-
